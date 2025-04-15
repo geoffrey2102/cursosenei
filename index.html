@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Capacitación Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="cta.jpg"sizes="4000x4000">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Logo Centro de Capacitación" loading="lazy">
+                <div class="logo-text">Centro<span>Capacitación</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#programs">Programas</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-courses" placeholder="Busco un curso de ......">
+                <button id="search-button">🔍</button>
+            </div>
+        </div>
+        <div id="search-results" class="search-results"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <ul>
+        <li style="padding: 200px; color: white;">
+            <section class="hero">
+                <div class="container">
+                    <img src="fondo_convertido.webp" alt="Imagen de fondo" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: -1;" loading="lazy">
+                    <h1>TRANSFORMA TU FUTURO PROFESIONAL</h1>
+                    <h2>CON NUESTROS CURSOS Y ESPECIALIZACIONES</h2>
+                    <p>Bienvenido a la plataforma que te mostrará los cursos en los que puedes certificarte.</p>
+                    <p>Con la Escuela del Instituto Nacional de Estadística e Informática.</p>
+                    <button class="video-button">Ver Video</button>
+                </div>
+            </section>
+        </li>
+    </ul>
+    
+
+    <!-- Modal para el video -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video width="100%" height="400" controls>
+                <source src="Playlist Culpa Mia.mp4" type="video/mp4">
+                Tu navegador no soporta reproducción de video.
+            </video>
+        </div>
+    </div>
+        </div>
+    </div>
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="areas-container">
+                <div class="areas-sidebar">
+                    <h3 class="areas-title">Áreas de Capacitación</h3>
+                    <ul class="area-list">
+                        <li class="area-item active" data-area="office">
+                            <span class="area-icon">📐</span>
+                            <span class="area-text">OFFICE</span>
+                        </li>
+                        <li class="area-item" data-area="excel">
+                            <span class="area-icon">💻</span>
+                            <span class="area-text">EXCEL</span>
+                        </li>
+                        <li class="area-item" data-area="software">
+                            <span class="area-icon">🎯</span>
+                            <span class="area-text">SOFTWARES ESTADÍSTICOS Y PARA BASES DE DATOS</span>
+                        </li>
+                        <li class="area-item" data-area="programacion">
+                            <span class="area-icon">📊</span>
+                            <span class="area-text">PROGRAMACION</span>
+                        </li>
+                        <li class="area-item" data-area="estadistica">
+                            <span class="area-icon">🔧</span>
+                            <span class="area-text">ESTADISTICA Y ECONOMIA</span>
+                        </li>
+                        <li class="area-item" data-area="especializaciones">
+                            <span class="area-icon">🎖️</span>
+                            <span class="area-text">ESPECIALIZACIONES</span>
+                        </li>
+                    </ul>
+                </div>
+                
+
+                <div class="programs-content">
+                    <h3 class="program-type-title">Tipos de programas</h3>
+                    <div class="program-type-tabs">
+                        <div class="program-tab active" data-tab="modulares">PROGRAMAS MODULARES</div>
+                    </div>
+                      
+                    <!-- Programas de Diseño (Visible por defecto) -->
+                    <div  class="program-cards" id="office-programs">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="ofimatica-basica.jpg" alt="Herramientas Ofimaticas Basicas" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Herramientas ofimatica Basicas</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>25</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_basicas.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="officeintermedio.jpg" alt="Herramientas Ofimaticas Intermedias" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Herramientas ofimatica Intermedias</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>25</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="avanzado.jpg" alt="Herramientas Ofimaticas Avanzadas" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Herramientas Ofimaticas Avanzadas</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>15</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_avanzadas.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="Herramientas Ofimáticas para la Gestión Administrativa.jpg" alt="Herramientas Ofimáticas para la Gestión Administrativa" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Herramientas Ofimáticas para la Gestión Administrativa</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>20</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_administrativas.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Programas de Tecnología (Oculto por defecto) -->
+                    <div class="program-cards" id="excel-programs" style="display: none;">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="graficos.png" alt="Funciones y Graficos con Excel Basico" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Funciones y Graficos con Excel Basico</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>18</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="baseexcel.jpg" alt="Base de Datos con Excel" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Base de Datos con Excel</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>22</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="excel.jpg" alt="Procesamiento de Datos y Programación con Excel Avanzado" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Procesamiento de Datos y Programación con Excel Avanzado</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>20</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="tablas.jpg" alt="Procesamiento de Datos y Tablas Dinámicas en Excel" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Procesamiento de Datos y Tablas Dinámicas en Excel</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>20</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Programas de Marketing (Oculto por defecto) -->
+                    <div  class="program-cards" id="software-programs" style="display: none;">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="SPSS.png" alt="SPSS" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">SPSS</h3>
+                                <h4 class="program-title">Encuentralos en Los Tres niveles </h4>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>25</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="STATA1.png" alt="STATA" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">STATA </h3>
+                                <h4 class="program-title">Encuentralos en Los Tres niveles </h4>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>30</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="POWERBI.jpg" alt="POWER BI" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">POWER BI</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>30</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Programas de SAP (Oculto por defecto) -->
+                    <div class="program-cards" id="programacion-programs" style="display: none;">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="PROGRAMACIONR.webp" alt="Programacion Estadistica Con R" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Programacion Estadistica Con R</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>15</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="PYTHON.jpg" alt="Lenguaje de Programación con Python" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Lenguaje de Programación con Python</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>18</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Programas de Ingeniería (Oculto por defecto) -->
+                    <div class="program-cards" id="estadistica-programs" style="display: none;">
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="PLANEAMIENTO.jpg" alt="Planeamiento y Ejecución de Encuestas" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Planeamiento y Ejecución de Encuestas</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>20</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="ANALISIS.jpeg" alt="Análisis de Indicadores Económicos y Sociales en la Economía Nacional y Regional" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Análisis de Indicadores Económicos y Sociales en la Economía Nacional y Regional</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>100 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>15</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                            <!-- Añade este bloque dentro de <div class="program-cards" id="tecnologia-programs" style="display: none;"> -->
+                        </div>
+                        <div class="program-card">
+                            <div class="program-image">
+                                <img src="INDICADORES.jpg" alt="Construcción e Interpretación de Indicadores Económicos y Sociales" loading="lazy">
+                                <div class="program-badge">Programas Modulares</div>
+                            </div>
+                            <div class="program-details">
+                                <h3 class="program-title">Construcción e Interpretación de Indicadores Económicos y Sociales</h3>
+                                <div class="program-info">
+                                    <div class="info-item">
+                                        <span class="info-icon">🕒</span>
+                                        <span>30 Horas Académicas</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">💻</span>
+                                        <span>Online</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-icon">👥</span>
+                                        <span>15</span>
+                                    </div>
+                                </div>
+                                <div class="contenedor-boton">
+                                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                                </div>
+                            </div>
+                            <!-- Añade este bloque dentro de <div class="program-cards" id="tecnologia-programs" style="display: none;"> -->
+                        </div>
+                    </div>
+
+                  <div class="program-cards" id="especializaciones-programs" style="display: none;" loading="lazy">
+                    <div class="program-card">
+                    <div class="program-image">
+                    <img src="especializacionpython.png" alt="Especialización en ciencia de Datos con Python">
+                        <div class="program-badge">Especializaciones</div>
+                        </div>
+                    <div class="program-details">
+                    <h3 class="program-title">Especialización en ciencia de Datos con Python</h3>
+                    <div class="program-info">
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <span>150 Horas Académicas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <span>Online</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <span>20</span>
+                    </div>
+                </div>
+                <div class="contenedor-boton">
+                    <a href="excel_avanzado.html" class="boton-ver-programa">Ver Programa</a>
+                </div>
+            </div>
+        </div>
+        <div class="program-card">
+            <div class="program-image">
+                <img src="muestreo.jpg" alt="Especialización en muestreo" loading="lazy">
+                <div class="program-badge">Especializaciones</div>
+            </div>
+            <div class="program-details">
+                <h3 class="program-title">Especialización en muestreo</h3>
+                <div class="program-info">
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <span>180 Horas Académicas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <span>Online</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <span>15</span>
+                    </div>
+                </div>
+                <div class="contenedor-boton">
+                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                </div>
+            </div>
+        </div>
+        <div class="program-card">
+            <div class="program-image">
+                <img src="estadisticaaplicada.png" alt="Especialización en Estadística Aplicada" loading="lazy">
+                <div class="program-badge">Especializaciones</div>
+            </div>
+            <div class="program-details">
+                <h3 class="program-title">Especialización en Estadística Aplicada</h3>
+                <div class="program-info">
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <span>180 Horas Académicas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <span>Online</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <span>15</span>
+                    </div>
+                </div>
+                <div class="contenedor-boton">
+                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                </div>
+            </div>
+        </div>
+        <div class="program-card">
+            <div class="program-image">
+                <img src="ofimaticaespe.jpg" alt="Especialización en Herramientas Ofimáticas " loading="lazy">
+                <div class="program-badge">Especializaciones</div>
+            </div>
+            <div class="program-details">
+                <h3 class="program-title">Especialización en Herramientas Ofimáticas </h3>
+                <div class="program-info">
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <span>180 Horas Académicas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <span>Online</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <span>15</span>
+                    </div>
+                </div>
+                <div class="contenedor-boton">
+                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                </div>
+            </div>
+            <!-- Añade este bloque dentro de <div class="program-cards" id="tecnologia-programs" style="display: none;"> -->
+        </div>
+        <div class="program-card">
+            <div class="program-image">
+                <img src="excelespe.png" alt="Especialización en Excel " loading="lazy">
+                <div class="program-badge">Especializaciones</div>
+            </div>
+            <div class="program-details">
+                <h3 class="program-title">Especialización en Excel </h3>
+                <div class="program-info">
+                    <div class="info-item">
+                        <span class="info-icon">🕒</span>
+                        <span>180 Horas Académicas</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <span>Online</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">👥</span>
+                        <span>15</span>
+                    </div>
+                </div>
+                <div class="contenedor-boton">
+                    <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+                </div>
+            </div>
+            <!-- Añade este bloque dentro de <div class="program-cards" id="tecnologia-programs" style="display: none;"> -->
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Beneficios de Nuestra Capacitación</h2>
+                <p>Desarrolla tu potencial con un enfoque práctico y orientado a resultados.</p>
+            </div>
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Certificación Reconocida</h3>
+                    <p>Obtén certificados reconocidos por empresas líderes de la industria que validarán tus competencias profesionales.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">👨‍🏫</div>
+                    <h3>Instructores Expertos</h3>
+                    <p>Aprende de profesionales con amplia experiencia en la industria que te guiarán en cada paso de tu formación.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Formación Práctica</h3>
+                    <p>70% práctica y 30% teoría. Aprenderás haciendo en talleres equipados con tecnología de punta.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Bolsa de Trabajo</h3>
+                    <p>Accede a oportunidades laborales a través de nuestra red de empresas asociadas y servicio de colocación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¡Comienza Tu Formación Hoy!</h2>
+            <p>No esperes más para impulsar tu carrera profesional. Inscríbete ahora y asegura tu lugar en nuestros programas de alta demanda.</p>
+        </div>
+    </section>
+
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.seccion-cursos {
+    max-width: 1200px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #0053D6;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.carrusel {
+    display: flex;
+    align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 30px;
+    scroll-behavior: smooth;
+}
+
+.tarjeta {
+    flex: 0 0 300px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Dejamos que la altura se determine por el contenido y el stretch del carrusel */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.etiqueta {
+    position: absolute;
+    background-color: #2E32D1;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 15px;
+    font-weight: 500;
+}
+
+.contenido {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* El contenido crece para ocupar el espacio */
+}
+
+.titulo-curso {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0053D6;
+    margin-bottom: 15px;
+}
+
+.info {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info i {
+    font-size: 1rem;
+    color: #888;
+}
+
+.boton {
+    display: inline-block;
+    justify-content: center;
+    background-color: #00B4F0;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    width: auto;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: #009ccc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #00B4F0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.flecha:hover {
+    background-color: #009ccc;
+    transform: translateY(-52%);
+}
+
+.flecha.izquierda {
+    left: 10px;
+}
+
+.flecha.derecha {
+    right: 10px;
+}
+
+.info i {
+    font-size: 1rem;
+    color: #888;
+}
+      </style>
+</head>
+<body>
+  <section class="seccion-cursos">
+    <h2 class="titulo-principal">Nuevos programas que llevarán tu carrera al siguiente nivel __</h2>
+
+    <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#8592;</button>
+    <div class="carrusel" id="carruselCursos">
+
+      <!-- Curso 1 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="ofimatica-basica.jpg" alt="Herramientas Ofimaticas Basicas" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Herramientas Ofimaticas 
+            Basicas</h3>
+          <div class="info">🕒 30 horas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_basicas.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+<!-- Curso 2 -->
+<div class="tarjeta">
+    <div style="position: relative;">
+      <span class="etiqueta">Programas Modulares</span>
+      <img src="officeintermedio.jpg" alt="Herramientas Ofimáticas Intermedias" loading="lazy">
+    </div>
+    <div class="contenido">
+      <h3 class="titulo-curso">Herramientas Ofimáticas Intermedias</h3>
+      <div class="info">🕒 30 Horas Académicas</div>
+      <div class="info">💻 Online</div>
+      <div class="info">👥 25</div>
+      <div class="contenedor-boton">
+        <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+    </div>
+    </div>
+  </div>
+      <!-- Curso 3 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="avanzado.jpg" alt="Herramientas Ofiaticas Avanzadas" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Herramientas Ofimaticas 
+            Avanzadas</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Curso 4 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="graficos.png" alt="Funciones y Graficos con Excel Basico" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Funciones y Graficos con Excel Basico</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+
+      <!-- Curso 5 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="baseexcel.jpg" alt="Base de Datos 
+          con Excel" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Base de Datos 
+            con Excel</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+      <!-- Curso 6 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="excel.jpg" alt="Procesamiento de Datos y Programación con Excel Avanzado" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Procesamiento de Datos y Programación con Excel Avanzado</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+      <!-- Curso 7 -->
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="tablas.jpg" alt="Procesamiento de Datos y Tablas Dinámicas en Excel" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">Procesamiento de Datos y Tablas Dinámicas en Excel</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+      <div class="tarjeta">
+        <div style="position: relative;">
+          <span class="etiqueta">Programas Modulares</span>
+          <img src="SPSS.png" alt="SPSS
+          Encuentralos en Los Tres niveles" loading="lazy">
+        </div>
+        <div class="contenido">
+          <h3 class="titulo-curso">SPSS
+            Encuentralos en Los Tres niveles</h3>
+          <div class="info">🕒 30 Horas Académicas</div>
+          <div class="info">💻 Online</div>
+          <div class="info">👥 25</div>
+          <div class="contenedor-boton">
+            <a href="herramientas_ofimaticas_intermedias.html" class="boton-ver-programa">Ver Programa</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <button class="flecha derecha" onclick="moverCarrusel(1)">&#8594;</button>
+  </section>
+
+  <script>
+    function moverCarrusel(direccion) {
+      const carrusel = document.getElementById('carruselCursos');
+      const ancho = carrusel.querySelector('.tarjeta').offsetWidth + 20; // 20 es el gap
+      carrusel.scrollBy({ left: direccion * ancho, behavior: 'smooth' });
+    }
+  </script>
+</body>
+    
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Estudiantes</h2>
+                <p>Historias de éxito de quienes ya han completado nuestros programas.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Gracias a la capacitación en Diseño Gráfico, conseguí trabajo en una agencia reconocida apenas un mes después de graduarme. La formación práctica fue fundamental."</p>
+                    <div class="testimonial-author">
+                        <img src="PERFIL1.jpg" alt="Carlos Mendoza" loading="lazy">
+                        <div class="author-info">
+                            <h4>Carlos Mendoza</h4>
+                            <p>Diseñador Gráfico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"El programa de Desarrollo Web me dio las herramientas que necesitaba para ascender en mi empresa. Ahora soy líder de proyectos digitales."</p>
+                    <div class="testimonial-author">
+                        <img src="PERFFIL2.webp" alt="Laura Sánchez" loading="lazy">
+                        <div class="author-info">
+                            <h4>Laura Sánchez</h4>
+                            <p>Líder de Proyectos Web</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"La formación en Edición de Video cambió mi vida. Pasé de no tener conocimientos en producción audiovisual a trabajar como editor freelance en menos de un año."</p>
+                    <div class="testimonial-author">
+                        <img src="PERFIL3.png" alt="Miguel Torres" loading="lazy">
+                        <div class="author-info">
+                            <h4>Miguel Torres</h4>
+                            <p>Editor de Video</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Escuela Nacional de Estadística e Informática</p>
+                <address>
+                    Calle Real 615, Huancayo<br>
+                    Teléfono: 948751795<br>
+                    Correo: enei.junin615@gmail.com
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos y Contactanos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61560786057025" target="_blank" class="facebook-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/948751795" target="_blank" class="whatsapp-icon" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://m.inei.gob.pe/enei/cursos_programados/" target="_blank" class="inei-link" aria-label="inei">
+                        <img src="logo.png" 
+                             alt="Logo INEI" 
+                             style="height: 40px;">
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <h4>¡Transforma tu futuro hoy!</h4>
+            <p>Matrículate en nuestros programas y da el primer paso hacia tu éxito profesional.</p>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Escuela Nacional de Estadística e Informática. Todos los derechos reservados.
+        </div>
+    </footer>
+    
+
+
+  <script>
+    // Buscador de cursos
+    const searchInput = document.getElementById('search-courses');
+    const searchButton = document.getElementById('search-button');
+    const searchResults = document.getElementById('search-results');
+  
+    function getAllCourses() {
+      const courses = [];
+      document.querySelectorAll('.program-card').forEach(card => {
+        const title = card.querySelector('.program-title').textContent;
+        const category = card.closest('.program-cards').id.replace('-programs', '');
+        const hours = card.querySelector('.info-item:first-child span:last-child').textContent;
+  
+        courses.push({
+          title: title,
+          category: category,
+          hours: hours,
+          element: card
+        });
+      });
+      console.log("Cursos encontrados:", courses.length); // Verifica que se encuentren cursos
+      return courses;
+    }
+
+    // Mostrar programas cuando se hace clic en un área
+  document.querySelectorAll('.area-item').forEach(item => {
+    item.addEventListener('click', function() {
+      // Quitar clase active de todos los items
+      document.querySelectorAll('.area-item').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      // Añadir clase active al elemento clickeado
+      this.classList.add('active');
+      
+      // Obtener el área seleccionada
+      const area = this.getAttribute('data-area');
+      
+      // Ocultar todos los programas
+      document.querySelectorAll('.program-cards').forEach(el => {
+        el.style.display = 'none';
+      });
+      
+      // Mostrar los programas del área seleccionada
+      console.log(area + '-programs');
+      document.getElementById(area + '-programs').style.display = 'grid';
+    });
+  });
+  
+    // Función de búsqueda
+    function searchCourses(query) {
+      const allCourses = getAllCourses(); // Obtener cursos actualizados cada vez
+  
+      if (!query.trim()) {
+        searchResults.style.display = 'none';
+        return;
+      }
+  
+      console.log("Buscando:", query); // Verifica que la búsqueda se active
+  
+      const filteredCourses = allCourses.filter(course =>
+        course.title.toLowerCase().includes(query.toLowerCase()) ||
+        course.category.toLowerCase().includes(query.toLowerCase())
+      );
+  
+      console.log("Resultados:", filteredCourses.length); // Verifica resultados
+      displayResults(filteredCourses);
+    }
+  
+    // Mostrar resultados
+    function displayResults(courses) {
+      searchResults.innerHTML = '';
+  
+      if (courses.length === 0) {
+        searchResults.innerHTML = '<div class="search-results-item">No se encontraron cursos con ese criterio</div>';
+        searchResults.style.display = 'block';
+        return;
+      }
+  
+      courses.forEach(course => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'search-results-item';
+        resultItem.innerHTML = `
+          <h4>${course.title}</h4>
+          <p>Categoría: ${course.category}</p>
+          <p>Duración: ${course.hours}</p>
+        `;
+  
+        resultItem.addEventListener('click', () => {
+          // Ocultar todos los programas
+          document.querySelectorAll('.program-cards').forEach(el => {
+            el.style.display = 'none';
+          });
+  
+          // Mostrar la categoría correspondiente
+          document.getElementById(course.category + '-programs').style.display = 'grid';
+  
+          // Resaltar el área en el sidebar
+          document.querySelectorAll('.area-item').forEach(el => {
+            el.classList.remove('active');
+          });
+          document.querySelector(`.area-item[data-area="${course.category}"]`).classList.add('active');
+  
+          // Hacer scroll a la sección de programas
+          document.getElementById('programs').scrollIntoView({behavior: 'smooth'});
+  
+          // Resaltar el curso encontrado
+          course.element.style.boxShadow = '0 0 15px rgba(75, 123, 245, 0.5)';
+          setTimeout(() => {
+            course.element.style.boxShadow = '';
+          }, 3000);
+  
+          // Ocultar resultados
+          searchResults.style.display = 'none';
+          searchInput.value = '';
+        });
+  
+        searchResults.appendChild(resultItem);
+      });
+  
+      searchResults.style.display = 'block';
+    }
+  
+    // Configurar eventos después de asegurarse que el DOM está cargado
+    window.addEventListener('load', function() {
+      // Eventos
+      searchButton.addEventListener('click', () => {
+        console.log("Botón de búsqueda clickeado");
+        searchCourses(searchInput.value);
+      });
+  
+      searchInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+          console.log("Enter presionado en búsqueda");
+          searchCourses(searchInput.value);
+        }
+      });
+  
+      // Ocultar resultados al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchButton.contains(e.target) && !searchResults.contains(e.target)) {
+          searchResults.style.display = 'none';
+        }
+      });
+  
+      // Mostrar resultados al enfocar el input
+      searchInput.addEventListener('focus', () => {
+        if (searchInput.value.trim() !== '') {
+          searchCourses(searchInput.value);
+        }
+      });
+  
+      console.log("Buscador inicializado correctamente");
+    });
+  
+  
+    // Función para abrir PDF de temario
+    function abrirTemarioPDF(nombreCurso) {
+      // Obtener la ruta del PDF según el nombre del curso
+      const rutaPDF = obtenerRutaPDF(nombreCurso);
+  
+      // Abrir el PDF en una nueva pestaña
+      if (rutaPDF) {
+        window.open(rutaPDF, '_blank');
+      } else {
+        alert('El temario para este curso aún no está disponible.');
+      }
+    }
+  
+    const transitionAreas = document.querySelectorAll('.transition-area');
+    let currentIndex = 0;
+  
+    function showNextTransition() {
+      // Oculta la transición actual
+      transitionAreas[currentIndex].style.display = 'none';
+  
+      // Incrementa el índice y vuelve a 0 si llega al final
+      currentIndex = (currentIndex + 1) % transitionAreas.length;
+  
+      // Muestra la siguiente transición
+      transitionAreas[currentIndex].style.display = 'flex';
+    }
+  
+    // Muestra la primera transición al cargar la página
+    if (transitionAreas.length > 0) {
+      transitionAreas[currentIndex].style.display = 'flex';
+      // Inicia el desplazamiento automático cada 3 segundos (ajusta el tiempo según sea necesario)
+      setInterval(showNextTransition, 3000);
+    }
+  
+  
+    // Función para abrir y cerrar el modal
+    const videoButton = document.querySelector('.video-button');
+    const modal = document.querySelector('#video-modal');
+    const closeModal = document.querySelector('.close-modal');
+  
+    if (videoButton && modal && closeModal) {
+      videoButton.addEventListener('click', () => {
+        modal.style.display = 'flex'; // Abre el modal
+      });
+  
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none'; // Cierra el modal
+      });
+  
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none'; // Cierra al hacer clic fuera del contenido
+        }
+      });
+    }
+
+  </script>
+
+<!--Start of Tawk.to Script-->
+
+    <!--End of Tawk.to Script-->
+</body>
+
+  
+</html>
