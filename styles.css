@@ -1,0 +1,1065 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #0046cc;
+    --secondary-color: #00b7ff;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --success-color: #28a745;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #d8dadd, #8a9497); /* Gradiente atractivo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombras profundas */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    padding: 10px 0; /* Espaciado vertical */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end; /* Alinea todo a la derecha */
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 25px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre elementos del menú */
+    margin-left: 50px; /* Aumenta la separación del título */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 15px; /* Espaciado interno estilo botón */
+    border-radius: 5px; /* Bordes suaves */
+    background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0046cc;
+    background: white; /* Contraste claro en hover */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el buscador hacia la derecha */
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px 15px;
+    border: 2px solid #0046cc; /* Color de borde consistente */
+    border-radius: 30px; /* Bordes redondeados modernos */
+    font-size: 16px;
+    width: 220px;
+    transition: all 0.3s ease;
+}
+
+.search-container button {
+    background-color: #0046cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #00b7ff;
+    transform: scale(1.05);
+}
+
+
+.search-container input {
+    padding: 12px 18px; /* Espaciado más generoso */
+    border: 2px solid #0046cc; /* Color del borde consistente con el diseño */
+    border-radius: 30px; /* Bordes redondeados para estilo moderno */
+    font-size: 16px; /* Tamaño profesional */
+    width: 250px; /* Ancho del campo de búsqueda */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
+}
+
+.search-container input::placeholder {
+    color: #888; /* Color del texto de ayuda */
+    font-style: italic;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #00b7ff; /* Color brillante al enfocarse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+.search-container button {
+    background-color: #0046cc;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Botón espacioso y cómodo */
+    cursor: pointer;
+    border-radius: 30px; /* Bordes suaves y redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar el botón */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #00b7ff;
+    transform: scale(1.1); /* Efecto dinámico en hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-container {
+        width: 100%;
+        justify-content: center; /* Centra el buscador en pantallas pequeñas */
+        margin-top: 10px;
+    }
+
+    .search-container input {
+        width: 100%; /* Ancho completo para dispositivos pequeños */
+    }
+}
+
+/* Hero Section */
+/* Botón para reproducir el video */
+.hero .video-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+}
+
+.hero .video-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1); /* Efecto dinámico */
+}
+
+
+
+
+.hero-content {
+    text-align: right; /* Alinea el texto hacia la derecha */
+    max-width: 50%;
+    margin-right: 30px; /* Reduce la distancia desde el borde derecho */
+    position: relative;
+    top: -15px; /* Ajusta la posición del texto hacia arriba */
+}
+
+.hero h1 {
+    font-size: 80px; /* Tamaño grande para mayor impacto */
+    font-weight: 700;
+    text-transform: uppercase; /* Mayúsculas para destacar profesionalismo */
+    line-height: 1.2;
+    margin-bottom: 10px; /* Reduce espacio debajo del título */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Sombra más intensa para contraste */
+}
+
+.hero h2 {
+    font-size: 28px; /* Incrementa tamaño para destacar subtítulos */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9); /* Blanco con opacidad */
+    margin-bottom: 20px; /* Ajusta espacio debajo del subtítulo */
+}
+
+.hero p {
+    font-size: 26px; /* Tamaño más grande para mayor legibilidad */
+    line-height: 1.8;
+    color: rgba(218, 214, 17, 0.9); /* Amarillo vibrante para resaltar */
+    margin-bottom: 5px; /* Reduce espacio entre párrafos */
+}
+
+
+.hero .action-buttons {
+    margin-top: 30px;
+}
+
+.hero .action-buttons .primary-button, 
+.hero .action-buttons .secondary-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .action-buttons .primary-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero .action-buttons .primary-button:hover {
+    background-color: #003d82;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hero .action-buttons .secondary-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.hero .action-buttons .secondary-button:hover {
+    background-color: #007faf;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Programs Section */
+.programs {
+    padding: 100px 0; /* Más espacio vertical para destacar la sección */
+    background: linear-gradient(to bottom, #f8f9fa, #e0e0e0); /* Fondo suave con gradiente */
+}
+
+.programs-header {
+    text-align: center;
+    margin-bottom: 50px; /* Espacio adicional para separar el título */
+}
+
+.programs-header h2 {
+    font-size: 40px; /* Texto más grande para mayor impacto */
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Estilo profesional */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+.areas-container {
+    display: flex;
+    flex-wrap: wrap; /* Diseño flexible para pantallas más pequeñas */
+    margin-top: 50px; /* Espacio adicional para claridad */
+    gap: 30px; /* Espacio uniforme entre áreas y contenido */
+}
+
+.areas-sidebar {
+    width: 300px;
+    padding-right: 30px;
+    border-right: 2px solid #e5e5e5; /* Separación visual profesional */
+}
+
+.areas-title {
+    color: var(--primary-color);
+    font-size: 26px; /* Texto más destacado */
+    font-weight: 600;
+    margin-bottom: 25px; /* Espaciado adicional */
+    padding-bottom: 15px; /* Espaciado más generoso */
+    border-bottom: 2px solid #ddd; /* Línea decorativa */
+}
+
+.area-list {
+    list-style: none;
+    margin-top: 20px; /* Espaciado entre el título y los elementos */
+}
+
+.area-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Bordes más suaves y modernos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para estilo profesional */
+}
+
+.area-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Destaca el ítem activo */
+}
+
+.area-item:hover:not(.active) {
+    background-color: rgba(0, 70, 204, 0.1); /* Fondo translúcido */
+    transform: scale(1.02); /* Efecto dinámico en hover */
+}
+
+.area-icon {
+    margin-right: 20px; /* Espaciado entre el ícono y el texto */
+    font-size: 24px; /* Ícono más visible */
+    color: var(--primary-color);
+}
+
+.area-item.active .area-icon {
+    color: white;
+}
+
+.area-text {
+    font-size: 18px; /* Tamaño de letra más legible */
+    font-weight: 600;
+}
+
+.programs-content {
+    flex: 1;
+    padding-left: 30px; /* Ajuste de espacio para separar del sidebar */
+}
+
+.program-type-tabs {
+    display: flex;
+    flex-wrap: wrap; /* Diseño más flexible para múltiples tabs */
+    margin-bottom: 30px;
+    gap: 15px; /* Espacio uniforme entre tabs */
+}
+
+.program-type-title {
+    color: var(--dark-color);
+    font-size: 26px; /* Tamaño más destacado */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.program-tab {
+    padding: 5px 10px; /* Botón más grande y cómodo */
+    border-radius: 50px; /* Bordes redondeados para modernidad */
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.program-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar el tab activo */
+}
+
+.program-tab.secondary {
+    background-color: #e0f7ff;
+    color: var(--secondary-color);
+}
+
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px; /* Espaciado uniforme entre las tarjetas */
+    margin-top: 40px; /* Espaciado para claridad visual */
+}
+
+.program-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.program-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.program-image img:hover {
+    transform: scale(1.05);
+}
+
+.program-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+.program-details {
+    padding: 25px;
+    flex-grow: 1; /* Permite que crezca para ocupar el espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio */
+}
+
+.program-title {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.program-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.info-icon {
+    margin-right: 10px;
+    color: #777;
+}
+
+/* Estilos para el contenedor del botón directamente dentro de program-card */
+.program-action {
+    text-align: center;
+    padding: 20px; /* Añade padding alrededor del botón */
+}
+
+
+.boton-ver-programa {
+    display: inline-block;
+    background-color: #004a99;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: 80%;
+    max-width: 250px;
+}
+
+.boton-ver-programa:hover {
+    background-color: #003366;
+}
+
+
+/* Benefits Section */
+.benefits {
+    padding: 100px 0; /* Más espacio para destacar la sección */
+    background: linear-gradient(to bottom, #ffffff, #f1f3f5); /* Fondo suave con gradiente */
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px; /* Espacio adicional para claridad visual */
+    color: var(--dark-color);
+}
+
+.section-title h2 {
+    font-size: 40px; /* Tamaño más destacado */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase; /* Estilo profesional */
+    color: var(--primary-color);
+}
+
+.section-title p {
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px; /* Tamaño más legible */
+    line-height: 1.6; /* Mejora la claridad visual */
+}
+
+.benefits-container {
+    display: grid; /* Diseño en rejilla para mejor orden */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espacio uniforme entre los elementos */
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px; /* Bordes redondeados más modernos */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombras para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px); /* Efecto en hover dinámico */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.benefit-item h3 {
+    font-size: 22px; /* Texto más destacado */
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 100px 0;
+    background: url('ct.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    color: white;
+    text-align: center;
+    position: relative; /* Posición relativa para manejar superposiciones */
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Superposición oscura para mejorar la legibilidad del texto */
+    z-index: 1;
+}
+
+.cta-section h2, 
+.cta-section p, 
+.cta-section .cta-button {
+    position: relative; /* Asegura que el contenido esté por encima de la superposición */
+    z-index: 2;
+}
+
+.cta-section h2 {
+    font-size: 42px; /* Título más impactante */
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-section p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.cta-section .cta-button {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-section .cta-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1); /* Efecto en hover dinámico */
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Más espacio entre tarjetas */
+}
+
+.testimonial-card {
+    background: linear-gradient(to top, #f8f9fa, #ffffff); /* Fondo con gradiente ligero */
+    padding: 40px;
+    border-radius: 15px; /* Bordes redondeados más elegantes */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px); /* Efecto dinámico en hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.testimonial-author img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    font-size: 18px;
+    color: var(--dark-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.author-info p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(to top, #343a40, #495057); /* Fondo degradado profesional */
+    color: white;
+    padding: 80px 0;
+    text-align: center; /* Centra todo el contenido */
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 24px; /* Título más grande y prominente */
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-transform: uppercase; /* Estilo profesional */
+}
+
+.footer-section p, .footer-section address {
+    margin-bottom: 10px;
+    color: #adb5bd; /* Texto de color claro */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los iconos de redes sociales */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--dark-color);
+    font-size: 22px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.social-links .facebook-icon {
+    color: #4267B2; /* Azul característico de Facebook */
+}
+
+.social-links .whatsapp-icon {
+    color: #25D366; /* Verde de WhatsApp */
+}
+
+.social-links .facebook-icon:hover {
+    background-color: #4267B2;
+}
+
+.social-links .whatsapp-icon:hover {
+    background-color: #25D366;
+}
+
+.call-to-action {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    margin-top: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.call-to-action h4 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Para más impacto */
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Mejora la claridad */
+}
+
+.call-to-action a {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.call-to-action a:hover {
+    background-color: #0096cc;
+    transform: scale(1.1); /* Efecto dinámico */
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #adb5bd;
+    color: #adb5bd;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario */
+.form-row {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-checkboxes {
+    margin: 20px 0;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.btn-enviar {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-enviar:hover {
+    background-color: #ff4146;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-container input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    width: 220px;
+}
+
+.search-container button {
+    background-color: #4B7BF5;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.search-results-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.search-results-item:hover {
+    background-color: #f5f5f5;
+}
+
+.search-results-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.search-results-item p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+    
+    .search-container {
+        margin: 15px 0;
+        width: 100%;
+    }
+    
+    .search-container input {
+        width: 100%;
+    }
+}
+.social-links a {
+    color: #3b5998; /* Color azul de Facebook */
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #2d4373; /* Un azul más oscuro para el hover */
+}
+.program-action {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ver-programa, .ver-temario {
+    flex: 1;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ver-programa {
+    background-color: #4B7BF5;
+    color: white;
+    border: none;
+}
+
+.ver-temario {
+    background-color: white;
+    color: #4B7BF5;
+    border: 1px solid #4B7BF5;
+}
+
+.ver-programa:hover {
+    background-color: #3560d0;
+}
+
+.ver-temario:hover {
+    background-color: #f0f5ff;
+}
+/* Estilo para la sección de programas */
+.program-transitions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para las áreas de transición */
+.transition-area {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transform: perspective(800px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.transition-area:hover {
+    transform: rotateY(360deg);
+}
+
+/* Detalles dentro del área de transición */
+.program-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.program-title {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.program-details p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.program-details img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
